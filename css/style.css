@@ -1,20 +1,203 @@
 /* style.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background-color: #e7ebc4; */
+    padding-left: 10%;
+    background: 
+        radial-gradient(circle at top right, rgb(254, 42, 81) 5%, rgb(255, 255, 255) 15%), 
+        radial-gradient(circle at bottom , rgb(243, 239, 33) 5%, rgb(255, 255, 255) 15%); 
+
 }
+
+header .blob {
+  position: absolute;
+  top: 20px;
+  left: 0%;
+  /* transform: translateX(-50%); */
+  width: 300px;
+  height: 250px;
+  z-index: -1; /* behind the text */
+  background: linear-gradient(135deg, rgb(47, 53, 240), rgb(101, 255, 252));
+  border-radius: 55% 45% 65% 35% / 60% 40% 70% 30%;
+  animation: blobMorph 8s infinite ease-in-out;
+}
+
+
+@keyframes blobMorph {
+  0% {
+    border-radius: 60% 40% 70% 30% / 65% 35% 75% 25%;
+  }
+  25% {
+    border-radius: 80% 20% 60% 40% / 50% 70% 30% 50%;
+  }
+  50% {
+    border-radius: 30% 70% 40% 60% / 20% 80% 35% 65%;
+  }
+  75% {
+    border-radius: 75% 25% 85% 15% / 60% 40% 80% 20%;
+  }
+  100% {
+    border-radius: 60% 40% 70% 30% / 65% 35% 75% 25%;
+  }
+}
+
+
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
 }
 
 th, td {
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #533d3d;
     text-align: left;
 }
 
-td:nth-child(3), td:nth-child(4) {
+td:nth-child(5), td:nth-child(4) {
     font-weight: bold; /* Makes the years bold */
+}
+
+hr{
+    border: none;
+    height: 2px;
+    background-color: #000000;
+    margin-right: 10%;
+}
+
+footer {
+    border: none;      /* elimina borde solo dentro del footer */
+    background-color: #000;       /* fondo negro */
+    color: #ffffff;                  /* texto blanco */
+    margin-left: -10%;
+    padding: 30px 10px;           /* espacio interno */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+      
+}
+
+footer a {
+    color: #ff005d;               /* color de los enlaces */
+    text-decoration: none;        /* quita subrayado */
+    margin: 0 10px;               /* separación entre enlaces */
+}
+
+footer a:hover {
+    text-decoration: underline;   /* efecto hover */
+}
+
+.usualText {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-left: 30%;
+    color: #000000;
+    text-align: center;
+    
+    margin-left: 10%;
+    
+}
+
+.usualText2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    margin-left: 0%;
+    margin-right: 20%;
+    color: #000000;
+    
+    
+}
+
+.ClassyQuote {
+  font-family: Georgia, 'Times New Roman', Times, serif; /* More elegant typeface */
+  font-size: 28px; /* Bigger text */
+  font-style: italic; /* Quotation feel */
+  color: #000000; /* Softer dark tone */
+  /* text-align: center; */
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 700px;
+  line-height: 1.6;
+
+  /* Classy decoration */
+  border-left: 5px solid #ff002b; 
+  background: #ebebeb;
+  border-radius: 10px;
+    
+}
+
+.ClassyText{
+    font-family: 'Times New Roman', Times, serif; /* More elegant typeface */
+    font-size: 20px; /* Bigger text */
+    color: #000000; /* Softer dark tone */
+    /* text-align: center; */
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.Subtext{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    color: #000000;
+    font-weight: bold;
+   
+    margin-top: 20px;
+    max-width: 700px;
+    line-height: 1.4;
+}
+
+.Subtext2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: 20px;
+    max-width: 700px;
+    color: #000;
+
+    position: relative;
+}
+
+.Subtext2::after {
+    content: "";
+    display: block;
+    width: 10%; /* length of underline */
+    height: 4px; 
+    background: #ff0073;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.TableTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: 20px;
+    max-width: 700px;
+    color: #000;
+    background-color: rgb(68, 226, 254);
+
+    position: relative;
+}
+
+#Quote img {  /*Keeps text from wrapping around the image*/
+  float: left;
+  margin-right: 20px; /* space between image and text */
+  border-radius: 5px; /* optional, makes it softer */
+}
+
+#Favorite-Quote {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between image and text */
+}
+
+#Favorite-Quote img {
+  border-radius: 10px;
+}
+
+.quote-content {
+  max-width: 600px; /* keeps text from stretching too wide */
 }
