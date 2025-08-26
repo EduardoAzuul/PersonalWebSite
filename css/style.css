@@ -5,9 +5,9 @@ body {
     /* background-color: #e7ebc4; */
     padding-left: 10%;
     background: 
-        radial-gradient(circle at top right, rgb(254, 42, 81) 5%, rgb(255, 255, 255) 15%), 
-        radial-gradient(circle at bottom , rgb(243, 239, 33) 5%, rgb(255, 255, 255) 15%); 
-
+      radial-gradient(circle at top right, rgb(254, 42, 81) 5%, transparent 15%), 
+      radial-gradient(circle at bottom left, rgb(243, 239, 33) 5%, transparent 15%),
+      #ffffff;
 }
 
 header .blob {
@@ -66,25 +66,7 @@ hr{
     margin-right: 10%;
 }
 
-footer {
-    border: none;      /* elimina borde solo dentro del footer */
-    background-color: #000;       /* fondo negro */
-    color: #ffffff;                  /* texto blanco */
-    margin-left: -10%;
-    padding: 30px 10px;           /* espacio interno */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-      
-}
 
-footer a {
-    color: #ff005d;               /* color de los enlaces */
-    text-decoration: none;        /* quita subrayado */
-    margin: 0 10px;               /* separación entre enlaces */
-}
-
-footer a:hover {
-    text-decoration: underline;   /* efecto hover */
-}
 
 .usualText {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -171,16 +153,18 @@ footer a:hover {
 
 .TableTitle {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     line-height: 1.4;
     margin-top: 20px;
     max-width: 700px;
-    color: #000;
-    background-color: rgb(68, 226, 254);
+    color: #ffffff;
+    text-align: center;
+    background-color: #ff005d;
 
     position: relative;
 }
+
 
 #Quote img {  /*Keeps text from wrapping around the image*/
   float: left;
@@ -200,4 +184,30 @@ footer a:hover {
 
 .quote-content {
   max-width: 600px; /* keeps text from stretching too wide */
+}
+
+
+footer {
+    border: none;      /* elimina borde solo dentro del footer */
+    background-color: #000;       /* fondo negro */
+    color: #ffffff;                  /* texto blanco */
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    padding: 30px 20%;           /* espacio interno */
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+      
+}
+
+footer a {
+    color: #ff005d;               /* color de los enlaces */
+    text-decoration: none;        /* quita subrayado */
+    margin: 0 10px;               /* separación entre enlaces */
+}
+
+footer a:hover {
+    text-decoration: underline;   /* efecto hover */
 }
